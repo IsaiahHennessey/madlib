@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Madlibs Game</title>
+  </head>
+  <body>
+    <h1>Fill in the blanks!</h1>
+    <form action="/story">
+      {% for prompt in prompts %}
+      <label for="{{ prompt }}">{{ prompt | capitalize }}:</label>
+      <input type="text" name="{{ prompt }}" id="{{ prompt }}" placeholder="{{ prompt }}" /><br />
+      {% endfor %}
+      <button type="submit">Create Story</button>
+    </form>
+  </body>
+</html>
